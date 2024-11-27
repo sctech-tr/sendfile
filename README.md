@@ -34,7 +34,12 @@ python -m sendfile download 192.168.1.114 my_file.txt --port 8000
 - `<SERVER_IP>`: Local IP address of the server.
 - `<FILE_NAME>`: Name of the file to download.
 - `--port`: Port of the server (default: `8000`).
-
+## 📜 Using as an HTTP server
+### DEPRECATED: This feature is deprecated. The sibling project [pyserver](https://github.com/sctech-tr/pyserver) is recommended for serving files over HTTP. It is built on top of SendFile and provides additional features.
+You can also use SendFile as an HTTP server to serve files from a specific directory. To do this, run the following command:
+```bash
+python -m sendfile serve --host 0.0.0.0 --port 80
+```
 ## 📂 File Structure
 ```plaintext
 sendfile/
