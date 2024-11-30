@@ -8,7 +8,7 @@ class FileServerHandler(SimpleHTTPRequestHandler):
         rel_path = path.lstrip("/")
         return os.path.join(base_dir, rel_path)
 
-def start_server(host="0.0.0.0", port=8000):
+def start_server(host="0.0.0.0", port=80):
     os.makedirs(os.path.expanduser("~/.sendfile/uploads"), exist_ok=True)
     server_address = (host, port)
     httpd = HTTPServer(server_address, FileServerHandler)

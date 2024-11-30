@@ -10,13 +10,13 @@ def main():
     # Server mode
     server_parser = subparsers.add_parser("serve", help="Start the sendfile server")
     server_parser.add_argument("--host", default="0.0.0.0", help="Host to bind the server (default: 0.0.0.0)")
-    server_parser.add_argument("--port", type=int, default=8000, help="Port to bind the server (default: 8000)")
+    server_parser.add_argument("--port", type=int, default=80, help="Port to bind the server (default: 80)")
 
     # Client mode
     client_parser = subparsers.add_parser("download", help="Download a file from a sendfile server")
     client_parser.add_argument("ip", help="IP address of the server")
     client_parser.add_argument("file_name", help="Name of the file to download")
-    client_parser.add_argument("--port", type=int, default=8000, help="Port of the server (default: 8000)")
+    client_parser.add_argument("--port", type=int, default=80, help="Port of the server (default: 80)")
 
     args = parser.parse_args()
 
